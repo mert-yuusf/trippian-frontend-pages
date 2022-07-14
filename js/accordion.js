@@ -1,16 +1,29 @@
 import {FaqQuestions} from "./accordionFAQ-data.js";
 
-const setClassOfCategory = (question)=>{
-    if(question.category === "Live Map"){
+
+const accordionFAQ = document.querySelector("#accordionFAQ");
+const queryField = document.querySelector("#query");
+
+const getQuestions = (query) => {
+    if (query) {
+        return FaqQuestions.filter(question => {
+            return question.answer.toLowerCase().includes(query.toLowerCase())
+                || question.category.toLowerCase().includes(query.toLowerCase())
+                || question.question.toLowerCase().includes(query.toLowerCase());
+        });
+    }
+    return FaqQuestions;
+}
+
+const setClassOfCategory = (question) => {
+    if (question.category === "Live Map") {
         return "bg-primary";
-    }else if(question.category === "General"){
+    } else if (question.category === "General") {
         return "bg-dark"
     }
 }
 
-const displayQuestions = (questions)=>{
-    const accordionFAQ = document.querySelector("#accordionFAQ");
-    accordionFAQ.innerHTML = "";
+const displayQuestions = (questions) => {
     accordionFAQ.innerHTML = questions.map(question => {
         return `<div class="accordion-item">
     <h2 class="accordion-header" id="heading-${question.id}">
@@ -28,20 +41,15 @@ const displayQuestions = (questions)=>{
     }).join(" ");
 }
 
-
-
-const searchForm = document.querySelector("#search-form");
 displayQuestions(FaqQuestions);
-setInterval(()=>{
-    const query = document.querySelector("#query").value;
-    if(query!== "" && query.length >= 3){
-        const questions = FaqQuestions.filter(question => {
-            return question.answer.toLowerCase().includes(query.toLowerCase())
-                || question.category.toLowerCase().includes(query.toLowerCase())
-                || question.question.toLowerCase().includes(query.toLowerCase());
-        });
-        displayQuestions(questions);
-    }else{
-        displayQuestions(FaqQuestions);
-    }
-},1000);
+
+queryField.addEventListener("change",()=>{
+    const query = queryField.value;
+    let questions = getQuestions(query)
+    displayQuestions(questions);
+});
+
+
+
+
+
