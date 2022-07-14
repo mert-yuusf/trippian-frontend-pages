@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Trippian</title>
+</head>
+<body>
+
+<!--NAVBAR-->
+<nav class="navbar navbar-expand-lg navbar-light bg-white p-lg-4">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="./images/logo.png" alt="logo" class="logo">
+            <span class="fw-bolder">Trippian</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        <img src="./images/facebook.png" alt="facebook" class="social-link">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        <img src="./images/instagram.png" alt="instagram" class="social-link">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        <img src="./images/tiktok.png" alt="tiktok" class="social-link">
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        <img src="./images/twitter.png" alt="twitter" class="social-link">
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        <img src="./images/youtube.png" alt="youtube" class="social-link">
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                        <img src="./images/at.png" alt="at" class="social-link">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--END OF NAVBAR-->
+
+<header class="py-5 d-flex justify-content-center align-items-center my-3">
+    <h1 class="text-capitalize text-center my-5 text-white">frequently asked questions</h1>
+</header>
+
+<div class="row my-4">
+    <div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
+        <form action="" id="search-form" class="d-flex justify-content-between align-items-center">
+            <input type="text" id="query" class="form-control mx-4 fs-4" placeholder="search">
+            <input type="submit" value="Find" class="btn btn-light fs-5 px-3 mx-2">
+            <input type="button" value="View All" id="view-all-btn" class="btn btn-light fs-5 px-3 mx-2">
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-10 col-sm-12 col-lg-8 mx-auto">
+        <div class="accordion" id="accordionFAQ">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <span class="me-3 p-2 badge bg-primary">Live Map</span>
+                        <span>What is Live Map?</span>
+                    </button>
+
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                     data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>Live Map</strong> is function where users share their location as long as the function is ON. During this
+                        time users can track all other users using Live Map function on the map.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row footer py-5">
+    <p class="text-center fw-bold">For more information you can visit our supports page</p>
+    <a href="" class="text-center text-dark">Trippian</a>
+</div>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+<script src="./js/accordion.js" type="module"></script>
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+-->
+</body>
+</html>

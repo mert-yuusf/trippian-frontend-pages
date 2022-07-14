@@ -1,0 +1,21 @@
+.logo{
+    width: 60px;
+    height: 60px;
+}
+
+.social-link{
+    width: 40px;
+    height: 40px;
+}
+
+header{
+    background:linear-gradient(to right bottom,rgba(0,0,0,0.3),rgba(0,0,0,0.4)) ,url("../images/faq.jpg") center/cover no-repeat;
+    min-height: 20rem;
+}
+
+.bg-primary{
+    background: #C882AF !important;
+}
+.bg-dark{
+    background: #302F41 !important;
+}
